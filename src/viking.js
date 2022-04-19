@@ -47,7 +47,7 @@ super(health, strength)}
 
 
 receiveDamage(damage){
-  if( this.health > 0){
+  if( this.health < 0){
     return`A Saxon has received ${damage} points of damage`;
   } else{
    return `A Saxon has died in combat`;
@@ -55,10 +55,9 @@ receiveDamage(damage){
 } 
 }
 
-let alex = new Saxon (25,28)
+let alex = new Saxon ()
 console.log("Alex", alex.health);
-[0, 1, 5, 8, 11].forEach(damage=>(console.log(new Saxon(5, 28).receiveDamage(damage))));
-  //for(let damage of [0, 1, 5, 8 , 11]) alex.receiveDamage(damage)
+console.log(alex.receiveDamage(20));
 console.log(alex.health);
 
 // War
