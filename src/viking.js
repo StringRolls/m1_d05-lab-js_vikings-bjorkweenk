@@ -62,12 +62,51 @@ console.log("Alex", alex.health);
 console.log(alex.health);
 
 // War
-class War {}
+class War {
+  constructor(vikingArmy=0, saxonArmy=0){
+  this.vikingArmy = [];
+  this.saxonArmy = [];
+}
 
+vikingAttack() {
+  let randomSaxon =
+    this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)];
+  let randomViking =
+    this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
+  let attackResult = randomSaxon.receiveDamage(randomViking.strength);
+  if (randomSaxon.health <= 0) {
+    saxonArmy.splice(indexOf(randomSaxon), 1);
+  } else {
+  }
+  return attackResult;
+}
+saxonAttack() {
+  let randomSaxon =
+    this.saxonArmy[Math.floor(Math.random() * this.saxonArmy.length)];
+  let randomViking =
+    this.vikingArmy[Math.floor(Math.random() * this.vikingArmy.length)];
+  let attackResult = randomViking.receiveDamage(randomSaxon.strength);
+  if (randomViking.health <= 0) {
+    vikingArmy.splice(indexOf(randomViking), 1);
+  } else {
+  }
+  return attackResult;
+}
+showStatus(status) {
+  if(this.saxonArmy > 1) {
+    return `Vikings and Saxons are still in the thick of battle. `;
+  } else {
+    return `Vikings have won the war of the century!`;
+        }
+    }
+  }
 
+console.log(this.saxonArmy)
+console.log(this.vikingArmy)
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
 if (typeof module !== 'undefined') {
   module.exports = { Soldier, Viking, Saxon, War };
 }
+
