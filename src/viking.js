@@ -1,5 +1,8 @@
+const { Soldier, Viking, Saxon, War } = require('./../src/viking');
 // Soldier
 class Soldier {}
+
+console.log("hello world");
 
 // Viking
 class Viking {}
