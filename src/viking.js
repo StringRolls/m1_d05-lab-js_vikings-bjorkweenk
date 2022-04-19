@@ -103,6 +103,7 @@ showStatus(status) {
 
 console.log(this.saxonArmy)
 console.log(this.vikingArmy)
+// HOW DO NEED TO CONSOLE LOG THIS ++ I DONT KNOW HOW TO RETURN THE VIKING STATUS
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
